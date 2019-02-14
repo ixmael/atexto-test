@@ -8,7 +8,7 @@ var upload = multer({ dest: 'uploads/' })
 app.use(express.static(path.resolve('build')));
 
 app.post('/upload', upload.single('file'), function (req, res) {
- return res.send('pong');
+ return res.send('ok');
 });
 
 app.get('/', function (req, res) {

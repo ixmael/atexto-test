@@ -89,8 +89,10 @@ export default class AtextoApp extends React.Component {
   }
 
   onSavingRecord = (current) => {
+    const { records } = this.state;
+
     const data = new FormData();
-    data.append('file', this.state.records[current].audio, 'audio');
+    data.append('file', records[current].audio, 'audio');
 
     axios.post('/upload', data, {
       headers: {
@@ -98,7 +100,12 @@ export default class AtextoApp extends React.Component {
       },
     })
     .then(res => {
-      console.log(res);
+      if (res.status === 200) {
+        records[current].isUploaded = true;
+        this.setState({
+          records,
+        });
+      }
     })
     .catch(err => {
       console.log(err);
