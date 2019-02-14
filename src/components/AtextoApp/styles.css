@@ -1,0 +1,27 @@
+.atexto {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.atexto.recording {
+  background: #dc3545;
+}
+
+.atexto header {
+  text-align: center;
+}
+
+.atexto .container {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.atexto.is-recording {
+  background: red;
+}
+
+footer {
+  width: 100%;
+}

@@ -1,0 +1,55 @@
+.record-item {
+  align-items: center;
+  border-bottom: 1px solid #7B6BEF;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-item .record-item-label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.label .label-title {
+  text-transform: uppercase;
+}
+
+.label .label-desc {
+  font-size: 0.8rem;
+}
+
+.record-item .controls > button {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.record-item-controls {
+  display: flex;
+}
+
+.record-item-controls > button {
+  border: none;
+  font-size: 1.3rem;
+  height: 40px;
+  width: 40px;
+  color: #ffffff;
+}
+
+.record-item-controls > button.play {
+  background: #007bff;
+}
+
+.record-item-controls > button.upload {
+  background: #28a745;
+  margin-left: 10px;
+}
+
+.record-item-controls > button.uploaded {
+  background: #0B4284;
+  margin-left: 10px;
+}
