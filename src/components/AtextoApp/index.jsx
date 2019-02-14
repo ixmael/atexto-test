@@ -96,6 +96,12 @@ export default class AtextoApp extends React.Component {
       headers: {
         'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
       },
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
     });
   }
 
